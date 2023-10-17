@@ -54,6 +54,7 @@ FROM python:${PY_VER} AS lean
 
 WORKDIR /app
 ENV LANG=C.UTF-8 \
+    SUPERSET_CONFIG_PATH=/app/superset_config.py
     LC_ALL=C.UTF-8 \
     SUPERSET_ENV=production \
     FLASK_APP="superset.app:create_app()" \
